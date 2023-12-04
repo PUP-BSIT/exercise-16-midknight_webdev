@@ -12,7 +12,7 @@ body {
 	background-position: center center;
 }
 
-.borders, .goals-div{
+.borders, .goals-div, .borders-link{
 	border: 3px solid #fde146;
 	border-radius: 5px;
 	background-color: rgba(0, 0, 0, 0.4);
@@ -58,12 +58,12 @@ ol {
 	list-style-position: inside;
 }
 
-ol a {
+ol a, a {
   color: #fefefe;
   text-decoration: none;
 }
 
-ol a:hover {
+ol a:hover, a {
 	color: #fde146;
 	font-weight: 700;
 	text-decoration: underline;
