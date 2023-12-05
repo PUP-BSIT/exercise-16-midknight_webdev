@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inconsolata&family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&');
+
 
 body {
     font-family: 'Inconsolata';
     font-size: 18px;
     color: #244358;
-    background-image: url('https://cdn.dribbble.com/users/1355613/screenshots/6441984/landscape.jpg');
+    background-image: url('landscape.jpg');
     background-size:auto;
     background-position: top;
 }
