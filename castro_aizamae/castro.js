@@ -77,5 +77,5 @@ function updateCommentList() {
 }
 
 document.getElementById('display_latest')
-    .addEventListener('change', updateCommentList);
-
+    .addEventListener('change', updateCommentList); 
+    
