@@ -1,11 +1,8 @@
-document.getElementById('display_latest')
-    .addEventListener('change', updateCommentList);
-
 async function searchCountry() {
-        const countryInput = 
-            document.getElementById('countryInput').value.toLowerCase();
+        const country_input = 
+            document.getElementById('country_input').value.toLowerCase();
         const countryUrl = 
-            `https://restcountries.com/v3.1/name/${countryInput}`;
+            `https://restcountries.com/v3.1/name/${country_input}`;
         
         try {
             const countryResponse = await fetch(countryUrl);
@@ -27,7 +24,7 @@ async function searchCountry() {
 }
     
 function displayCountryDetails(countryDetails) {
-    const detailsContainer = document.getElementById('country-details');
+    const detailsContainer = document.getElementById('country_details');
     detailsContainer.innerHTML = 
         `<h2>${countryDetails.name.common}</h2>                 
         <p>Capital: ${countryDetails.capital}</p>
@@ -42,7 +39,7 @@ function displayCountryDetails(countryDetails) {
 }
     
 function displayRegionCountries(regionData) {
-    const regionContainer = document.getElementById('region-countries');
+    const regionContainer = document.getElementById('region_countries');
     const regionCountries = regionData.map(country => country.name.common);
      regionContainer.innerHTML = 
         `<h3>Other countries in the same region:</h3>
