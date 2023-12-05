@@ -1,5 +1,5 @@
 function searchCountry() {
-    const input = document.getElementById('searchInput').value;
+    const input = document.getElementById('search_input').value;
 
     fetch(`https://restcountries.com/v3.1/name/${input}`)
         .then(response => {
@@ -13,7 +13,7 @@ function searchCountry() {
             const region = country.region;
 
             const countryDetailsElement = document
-                .getElementById('countryDetails');
+                .getElementById('country_details');
             countryDetailsElement.innerHTML = `
                 <h2>${country.name.common}</h2>
                 <p>Capital: ${country.capital}</p>
@@ -26,9 +26,9 @@ function searchCountry() {
                 .then(response => response.json())
                 .then(sameRegion => {
                     const sameRegionElement = document
-                        .getElementById('sameRegion');
+                        .getElementById('same_region');
                         sameRegionElement.innerHTML = 
-                        `<h3>Other countriesin the ${region} region:</h3>`;
+                        `<h3>Other countries in the ${region} region:</h3>`;
                         sameRegion.forEach(country => {
                             sameRegionElement.innerHTML += 
                             `<p>${country.name.common}</p>`;
@@ -38,7 +38,6 @@ function searchCountry() {
                      error));
         })
         .catch(error => {
-            // Country not found, show alert
             alert('Invalid country. Please enter valid name of a country.');
             console.error('Error fetching country details:', error);
         });
